@@ -1,2 +1,2 @@
 # d_skvorcov
-Skvorcov Demyan 
+Slack/Zoom: Skvorcov Demyan 
