@@ -28,8 +28,7 @@ public class N02_Quiz_Alt {
 
         //Создаем сканнер, инициализируем переменные
         Scanner scanner = new Scanner(System.in);
-        String userInput;
-        int userInputInt;
+        int userInput;
         int rightAnswerCount = 0;
 
         //Итерируем массив вопросов
@@ -44,9 +43,8 @@ public class N02_Quiz_Alt {
             //Принимаем ввод пользователя в виде ИНДЕКСА
             do {
                 System.out.println("Введите ответ: ");
-                userInput = scanner.next();
-                userInputInt = Integer.parseInt(userInput);
-                if(userInputInt>0 && userInputInt<answerTexts[questionIndex].length){
+                userInput = scanner.nextInt();
+                if(userInput>0 && userInput<answerTexts[questionIndex].length){
                     break;
                 }else{
                     System.out.println("Пожалуйста, введите индекс правильного ответа!");
@@ -56,7 +54,7 @@ public class N02_Quiz_Alt {
             System.out.println("Правильный ответ: " + rightAnswers[questionIndex]);
 
             //Сравниваем правильный ответ с вводом
-            if (rightAnswers[questionIndex] == userInputInt) {
+            if (rightAnswers[questionIndex] == userInput) {
                 System.out.println("Правильно!");
                 rightAnswerCount++;
             } else {
