@@ -59,6 +59,6 @@ public class N02_Quiz {
 
         }
 
-        System.out.println("Правильно отвечено: " + rightAnswerCount);
+        System.out.println("Правильно отвечено: " + rightAnswerCount + " из " + questionCount);
     }
 }
