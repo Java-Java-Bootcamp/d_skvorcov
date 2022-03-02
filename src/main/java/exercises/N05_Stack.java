@@ -1,3 +1,5 @@
+package exercises;
+
 public class N05_Stack {
 
     public static class MyStack{

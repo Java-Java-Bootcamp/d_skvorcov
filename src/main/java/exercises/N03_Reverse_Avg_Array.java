@@ -1,3 +1,5 @@
+package exercises;
+
 public class N03_Reverse_Avg_Array {
     public static void printArr(int[] arr){
         for (int i :

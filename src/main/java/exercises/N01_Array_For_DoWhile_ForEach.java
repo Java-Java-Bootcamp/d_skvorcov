@@ -1,3 +1,5 @@
+package exercises;
+
 import java.util.Scanner;
 
 public class N01_Array_For_DoWhile_ForEach {

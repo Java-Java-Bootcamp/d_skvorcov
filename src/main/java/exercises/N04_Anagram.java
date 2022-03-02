@@ -1,3 +1,5 @@
+package exercises;
+
 public class N04_Anagram {
     public static void checkTrue(boolean b){
         if(b)

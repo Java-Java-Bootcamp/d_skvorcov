@@ -1,8 +1,10 @@
+package exercises;
+
 import java.util.Scanner;
 
-public class N02_Quiz {
+public class N02_Quiz_Alt {
 
-    //Вариант с вводом через текст ответа
+    //Альтернативный вариант с вводом через индекс ответа
     public static void main(String[] args) {
 
         //Тексты ответов для вопросов
@@ -28,29 +30,33 @@ public class N02_Quiz {
 
         //Создаем сканнер, инициализируем переменные
         Scanner scanner = new Scanner(System.in);
-        String userInput = "";
-        String currentRightAnswerText = "";
+        int userInput;
         int rightAnswerCount = 0;
 
         //Итерируем массив вопросов
         for (int questionIndex = 0; questionIndex < questionCount; questionIndex++) {
 
-            //Печатаем текст вопроса и ответы
+            //Печатаем текст вопроса и ответы с их индексами
             System.out.println("Вопрос: " + questionTexts[questionIndex]);
-            for (String at : answerTexts[questionIndex]) {
-                System.out.println(at);
+            for (int x = 0; x < answerTexts.length; x++) {
+                System.out.println(x + ": " + answerTexts[questionIndex][x]);
             }
 
-            //Принимаем ввод пользователя в виде текста
-            userInput = scanner.next();
+            //Принимаем ввод пользователя в виде ИНДЕКСА
+            do {
+                System.out.println("Введите ответ: ");
+                userInput = scanner.nextInt();
+                if(userInput>0 && userInput<answerTexts[questionIndex].length){
+                    break;
+                }else{
+                    System.out.println("Пожалуйста, введите индекс правильного ответа!");
+                }
+            }while (true);
             System.out.println("Ваш ответ: " + userInput);
-
-            //Получаем правильный ответ из массивов
-            currentRightAnswerText = answerTexts[questionIndex][rightAnswers[questionIndex]];
-            System.out.println("Правильный ответ: " + currentRightAnswerText);
+            System.out.println("Правильный ответ: " + rightAnswers[questionIndex]);
 
             //Сравниваем правильный ответ с вводом
-            if (currentRightAnswerText.equals(userInput)) {
+            if (rightAnswers[questionIndex] == userInput) {
                 System.out.println("Правильно!");
                 rightAnswerCount++;
             } else {
