@@ -6,14 +6,9 @@ import exercises.N06_TestSuite.TestSuite.Question;
 import exercises.N06_TestSuite.TestSuite.UserInterface;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TN06 {
+public class TN06_TestSuite {
     public class ConsoleUserInterfaceMock extends ConsoleUserInterface{
         public int[] mockAnswers;
         private int answerIndex;

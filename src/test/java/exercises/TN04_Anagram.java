@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static exercises.N04_Anagram.checkIsAnagram;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class TN04 {
+public class TN04_Anagram {
 
     @Test
     public void testAnagram() {

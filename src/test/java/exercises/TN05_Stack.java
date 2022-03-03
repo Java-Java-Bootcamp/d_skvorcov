@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 
-public class TN05 {
+public class TN05_Stack {
 
     @Test
     public void testStack() {
@@ -13,10 +13,10 @@ public class TN05 {
         stack.put(5);
         stack.put(2);
         stack.put(4);
-        assertEquals(stack.get(),4);
-        assertEquals(stack.get(), 2);
-        assertEquals(stack.get(),5);
-        assertEquals(stack.get(),0);
-        assertNotEquals(stack.get(),-1);
+        assertEquals(4, stack.get());
+        assertEquals(2, stack.get());
+        assertEquals(5, stack.get());
+        assertEquals(0, stack.get());
+        assertNotEquals(-1, stack.get());
     }
 }
