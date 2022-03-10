@@ -2,7 +2,7 @@ package exercises;
 
 import java.util.regex.Pattern;
 
-public class N10_Regexp {
+public class N10_Regex {
     public enum ValidationType{
         PHONE(Pattern.compile("\\+?\\d\\(?\\d{3}\\)?\\d{3}-?\\d{2}-?\\d{2}")),
         EMAIL(Pattern.compile("\\w+@\\w+\\.\\w+")),
