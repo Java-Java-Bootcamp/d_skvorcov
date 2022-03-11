@@ -14,12 +14,24 @@ public class TN18_MyArrayList {
         l.add("hello3");
         l.add("hello4");
         l.add("hello5");
+        l.add(3, "hello33");
         for (Object o:l) {
             System.out.println(o);
         }
-        ListIterator listIterator = l.listIterator(4);
+        System.out.println("--");
+        ListIterator listIterator = l.listIterator(2);
+        boolean test = false;
         while(listIterator.hasPrevious()){
             System.out.println(listIterator.previous());
+            if(listIterator.hasPrevious() && !test){
+                test = true;
+                listIterator.add("HELLO!");
+                listIterator.next();
+            }
+        }
+        System.out.println("--");
+        for (Object o:l) {
+            System.out.println(o);
         }
     }
 }

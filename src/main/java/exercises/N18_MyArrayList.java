@@ -5,7 +5,7 @@ import java.util.*;
 public class N18_MyArrayList {
 
     public static class MyList<E> implements List<E> {
-        private Object[] data = new Object[5];
+        private Object[] data = new Object[2];
         private int size;
 
         @Override
@@ -21,7 +21,7 @@ public class N18_MyArrayList {
         @Override
         public boolean add(E e) {
             if (data.length == size) {
-                data = Arrays.copyOf(data, (int)(data.length * 1.5));
+                data = Arrays.copyOf(data, (int)(data.length * 2));
             }
             new ArrayList<>();
             data[size++] = e;
@@ -56,8 +56,6 @@ public class N18_MyArrayList {
                 if(data[i].equals(o)) return true;
             return false;
         }
-
-
 
         @Override
         public Object[] toArray() {
@@ -115,17 +113,18 @@ public class N18_MyArrayList {
             if(size+1>data.length){
                 data = Arrays.copyOf(data, (int) (data.length*1.5));
             }
-            for(int i = index+1; i+1<size; i++){
-                data[i] = data[i+1];
+            for(int i = size; i>index; i--){
+                data[i] = data[i-1];
             }
             data[index] = element;
+            size++;
         }
 
         @Override
         public E remove(int index) {
             E ret = (E) data[index];
-            for(int j = index; j+1<size; j++){
-                data[j] = data[j+1];
+            for(int i = size; i>index; i--){
+                data[i] = data[i-1];
             }
             return ret;
         }
@@ -158,12 +157,12 @@ public class N18_MyArrayList {
 
                 @Override
                 public boolean hasNext() {
-                    return current+1<=data.length;
+                    return current<size;
                 }
 
                 @Override
                 public E next() {
-                    return (E) data[current++];
+                    return MyList.this.get(current++);
                 }
             };
             return i;
@@ -183,27 +182,27 @@ public class N18_MyArrayList {
                 int current = index;
                 @Override
                 public boolean hasNext() {
-                    return current+1<=data.length;
+                    return current<size;
                 }
 
                 @Override
                 public E next() {
-                    return (E) data[current++];
+                    return MyList.this.get(current++);
                 }
 
                 @Override
                 public boolean hasPrevious() {
-                    return current>=0;
+                    return current>0;
                 }
 
                 @Override
                 public E previous() {
-                    return (E) data[current--];
+                    return MyList.this.get(--current);
                 }
 
                 @Override
                 public int nextIndex() {
-                    return current+1;
+                    return current;
                 }
 
                 @Override
