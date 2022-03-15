@@ -1,0 +1,1 @@
+{"moneyCells":[{"denomination":"ONE","banknotesNumber":500,"maxNumber":10000},{"denomination":"TEN","banknotesNumber":500,"maxNumber":10000},{"denomination":"HUNDRED","banknotesNumber":501,"maxNumber":10000}],"maxCellSize":10000,"currentAccount":{"amount":1100,"password":100}}

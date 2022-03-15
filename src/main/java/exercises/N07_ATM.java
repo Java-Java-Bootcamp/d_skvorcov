@@ -19,6 +19,9 @@ public class N07_ATM {
         public int amount;
         public int password;
 
+        public Account() {
+        }
+
         public Account(int amount, int password) {
             this.amount = amount;
             this.password = password;
@@ -42,9 +45,12 @@ public class N07_ATM {
     }
 
     public static class RealATM implements ATM{
-        private List<MoneyCell> moneyCells = new ArrayList<>();
-        private int maxCellSize = 1000;
-        private Account currentAccount;
+        public List<MoneyCell> moneyCells = new ArrayList<>();
+        public int maxCellSize = 1000;
+        public Account currentAccount;
+
+        public RealATM() {
+        }
 
         public RealATM(int maxCellSize) {
             this.maxCellSize = maxCellSize;
@@ -99,8 +105,11 @@ public class N07_ATM {
 
     public static class MoneyCell{
         public Denomination denomination;
-        int banknotesNumber;
-        int maxNumber;
+        public int banknotesNumber;
+        public int maxNumber;
+
+        public MoneyCell() {
+        }
 
         public MoneyCell(Denomination denomination, int banknotesNumber, int maxNumber) {
             this.denomination = denomination;
