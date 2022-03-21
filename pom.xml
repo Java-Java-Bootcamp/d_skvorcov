@@ -8,6 +8,10 @@
     <artifactId>OTUS_d_skvorcov</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>N27_Sockets</module>
+        <module>N28_SpringInitializr</module>
+    </modules>
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
