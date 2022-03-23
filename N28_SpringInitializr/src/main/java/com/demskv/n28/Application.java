@@ -1,4 +1,4 @@
-package com.demskv;
+package com.demskv.n28;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,7 +20,7 @@ public class Application implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args){
         logger.debug("Application - run");
         calculatorService.doSomething();
     }
