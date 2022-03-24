@@ -11,6 +11,7 @@
     <modules>
         <module>N27_Sockets</module>
         <module>N28_SpringInitializr</module>
+        <module>N30_SpingJPA</module>
     </modules>
     <dependencies>
         <dependency>
